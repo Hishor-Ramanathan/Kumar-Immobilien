@@ -1,13 +1,17 @@
 import React from 'react';
 import { COMPANY_INFO, Logo } from '../constants';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenLegal: (type: 'impressum' | 'datenschutz' | 'agb') => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div className="flex items-center gap-3 mb-6 md:mb-0">
-             <div className="bg-white/10 p-2 rounded-lg">
+             <div className="bg-white/10 p-2 rounded-lg w-12 h-12">
                 <Logo />
              </div>
              <div>
@@ -16,9 +20,9 @@ const Footer: React.FC = () => {
              </div>
           </div>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Datenschutz</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Impressum</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">AGB</a>
+            <button onClick={() => onOpenLegal('datenschutz')} className="text-gray-400 hover:text-white transition-colors text-sm">Datenschutz</button>
+            <button onClick={() => onOpenLegal('impressum')} className="text-gray-400 hover:text-white transition-colors text-sm">Impressum</button>
+            <button onClick={() => onOpenLegal('agb')} className="text-gray-400 hover:text-white transition-colors text-sm">AGB</button>
           </div>
         </div>
         

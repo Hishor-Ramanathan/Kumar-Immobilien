@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { COMPANY_INFO, Logo, Icons } from '../constants';
+import { Logo, Icons } from '../constants';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,13 +7,15 @@ const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24"> {/* Increased height from h-20 to h-24 */}
           
           {/* Logo Section */}
-          <div className="flex items-center gap-3">
-            <Logo />
-            <div>
-              <h1 className="text-xl font-bold text-brand-dark leading-none tracking-tight">KUMAR</h1>
+          <div className="flex items-center gap-4">
+            <div className="w-16 h-16"> {/* Adjusted dimensions for larger logo */}
+              <Logo />
+            </div>
+            <div className="hidden sm:block">
+              <h1 className="text-2xl font-bold text-brand-dark leading-none tracking-tight">KUMAR</h1>
               <p className="text-sm font-medium text-brand-light tracking-widest uppercase">Immobilien</p>
             </div>
           </div>

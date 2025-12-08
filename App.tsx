@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import AIChatBot from './components/AIChatBot';
+import LegalModals from './components/LegalModals';
 
 const App: React.FC = () => {
+  const [legalModalType, setLegalModalType] = useState<'impressum' | 'datenschutz' | 'agb' | null>(null);
+
+  const openLegalModal = (type: 'impressum' | 'datenschutz' | 'agb') => {
+    setLegalModalType(type);
+  };
+
+  const closeLegalModal = () => {
+    setLegalModalType(null);
+  };
+
   return (
     <div className="font-sans text-gray-800 bg-white min-h-screen">
       <Header />
@@ -17,8 +27,13 @@ const App: React.FC = () => {
         <About />
         <Contact />
       </main>
-      <Footer />
-      <AIChatBot />
+      <Footer onOpenLegal={openLegalModal} />
+      
+      <LegalModals 
+        isOpen={!!legalModalType} 
+        onClose={closeLegalModal} 
+        type={legalModalType} 
+      />
     </div>
   );
 };

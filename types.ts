@@ -1,9 +1,9 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 
 export interface ServiceItem {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 }
 
 export interface ChatMessage {

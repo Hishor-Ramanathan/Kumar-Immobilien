@@ -10,7 +10,7 @@ export const COMPANY_INFO: ContactInfo = {
   city: "5702 Niederlenz"
 };
 
-// SVG Icons as components to avoid external library dependency issues in this environment
+// SVG Icons
 export const Icons = {
   Phone: () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -45,9 +45,15 @@ export const Icons = {
 };
 
 export const Logo = () => (
-  <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M50 15L15 45H25V85H75V45H85L50 15Z" fill="#2E6F40" stroke="#2E6F40" strokeWidth="5" strokeLinejoin="round"/>
-    <rect x="40" y="55" width="20" height="20" fill="#E8F5E9"/>
-    <path d="M10 85C10 85 30 75 50 85C70 95 90 85 90 85V100H10V85Z" fill="#68B07C"/>
+  <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Green Wave at the bottom */}
+    <path d="M0 140C40 130 80 160 120 160C160 160 180 140 200 135V200H0V140Z" fill="#68B07C"/>
+    <path d="M0 155C40 145 80 175 120 175C160 175 180 155 200 150V200H0V155Z" fill="#2E6F40" fillOpacity="0.3"/>
+    
+    {/* House Icon */}
+    <path d="M100 20L30 80H50V145H150V80H170L100 20Z" fill="#2E6F40" stroke="#2E6F40" strokeWidth="8" strokeLinejoin="round"/>
+    
+    {/* Window */}
+    <rect x="80" y="95" width="40" height="40" fill="#E8F5E9"/>
   </svg>
 );

@@ -16,7 +16,7 @@ const About: React.FC = () => {
               {COMPANY_INFO.name} verbindet traditionelle Werte mit modernen Vermarktungsstrategien.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              Unser Ziel ist es, Ihnen den Immobilienprozess so angenehm wie möglich zu gestalten – egal ob Sie kaufen oder verkaufen.
+              Unser Ziel ist es, Ihnen den Immobilienprozess so angenehm wie möglich zu gestalten – egal ob Sie kaufen oder verkaufen. Wir kennen den Markt in 5702 Niederlenz wie unsere Westentasche.
             </p>
             
             <div className="bg-white p-6 rounded-xl shadow-sm border border-brand-light/20 inline-block">
@@ -32,21 +32,26 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Image/Visual Content */}
-          <div className="lg:w-1/2 relative">
+          {/* Google Maps Integration */}
+          <div className="lg:w-1/2 relative w-full h-[400px]">
             <div className="absolute top-0 right-0 -mr-10 -mt-10 w-64 h-64 bg-brand-light/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 -ml-10 -mb-10 w-64 h-64 bg-brand-dark/10 rounded-full blur-3xl"></div>
             
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
-              <img 
-                src="https://picsum.photos/800/600" 
-                alt="Beratungssgespräch" 
-                className="w-full object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
-                 <p className="text-white font-medium flex items-center gap-2">
+            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                frameBorder="0" 
+                style={{border:0}} 
+                src="https://maps.google.com/maps?q=Dorfrain%2010%2C%205702%20Niederlenz&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                allowFullScreen
+                title="Kumar Immobilien Standort"
+                className="w-full h-full"
+              ></iframe>
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-3 rounded-lg shadow-lg pointer-events-none">
+                 <p className="text-brand-dark font-medium flex items-center gap-2 text-sm">
                    <Icons.MapPin />
-                   {COMPANY_INFO.city}
+                   {COMPANY_INFO.address}, {COMPANY_INFO.city}
                  </p>
               </div>
             </div>
