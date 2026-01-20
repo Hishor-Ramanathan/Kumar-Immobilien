@@ -55,7 +55,7 @@ const Header: React.FC = () => {
             <a 
               href="#contact" 
               onClick={(e) => handleScroll(e, 'contact')}
-              className="bg-brand-dark text-white px-5 py-2.5 rounded-full font-medium hover:bg-brand-light transition-all transform hover:-translate-y-0.5 shadow-md flex items-center gap-2"
+              className="bg-gradient-to-r from-brand-dark to-brand-light text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all transform hover:-translate-y-1 shadow-md flex items-center gap-2"
             >
               <Icons.Phone />
               <span>Kontakt</span>

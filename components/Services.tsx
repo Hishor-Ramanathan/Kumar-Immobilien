@@ -30,17 +30,17 @@ const Services: React.FC = () => {
           <div className="w-24 h-1 bg-brand-light mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="group bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-100"
+              className="group bg-white rounded-3xl p-10 transition-all duration-500 hover:shadow-2xl hover:-translate-y-4 border-2 border-gray-50 hover:border-brand-light cursor-pointer"
             >
-              <div className="w-16 h-16 bg-brand-accent rounded-2xl flex items-center justify-center text-brand-dark mb-6 group-hover:bg-brand-dark group-hover:text-white transition-colors">
-                {service.icon}
+              <div className="w-20 h-20 bg-gradient-to-br from-brand-light to-brand-dark rounded-2xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="scale-150">{service.icon}</div>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-light transition-colors">{service.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-base">
                 {service.description}
               </p>
             </div>

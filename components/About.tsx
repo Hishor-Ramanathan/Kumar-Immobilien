@@ -9,15 +9,17 @@ const About: React.FC = () => {
           
           {/* Text Content */}
           <div className="lg:w-1/2">
-            <h3 className="text-brand-dark font-bold text-sm tracking-widest uppercase mb-2">Über Uns</h3>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">Persönlich und Nah</h2>
-            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              Als Ihr lokaler Partner in Niederlenz stehen wir für Vertrauen, Transparenz und Fachkompetenz. 
-              {COMPANY_INFO.name} verbindet traditionelle Werte mit modernen Vermarktungsstrategien.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              Unser Ziel ist es, Ihnen den Immobilienprozess so angenehm wie möglich zu gestalten – egal ob Sie kaufen oder verkaufen. Wir kennen den Markt in 5702 Niederlenz wie unsere Westentasche.
-            </p>
+            <h3 className="text-brand-light font-bold text-sm tracking-widest uppercase mb-3 flex items-center gap-2"><span className="w-2 h-2 bg-brand-light rounded-full"></span>Über Uns</h3>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-8 leading-tight">Persönlich und Nah</h2>
+            <div className="space-y-6">
+              <p className="text-gray-700 text-lg leading-relaxed font-light">
+                Als Ihr lokaler Partner in Niederlenz stehen wir für <span className="font-semibold text-brand-dark">Vertrauen, Transparenz</span> und <span className="font-semibold text-brand-dark">Fachkompetenz</span>. 
+                {COMPANY_INFO.name} verbindet traditionelle Werte mit modernen Vermarktungsstrategien.
+              </p>
+              <p className="text-gray-700 text-lg leading-relaxed font-light">
+                Unser Ziel ist es, Ihnen den Immobilienprozess so angenehm wie möglich zu gestalten – egal ob Sie kaufen oder verkaufen. Wir kennen den Markt in 5702 Niederlenz wie unsere Westentasche.
+              </p>
+            </div>
           </div>
 
           {/* Map Content */}

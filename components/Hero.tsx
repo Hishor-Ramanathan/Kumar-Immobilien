@@ -74,19 +74,19 @@ const Hero: React.FC = () => {
             in <span className="font-semibold text-white">Niederlenz</span> und der gesamten Region.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
             <a 
               href="#services" 
               onClick={(e) => handleScroll(e, 'services')}
-              className="bg-brand-dark text-white px-10 py-4 rounded-full font-bold hover:bg-brand-light transition-all transform hover:-translate-y-1 shadow-2xl text-center group flex items-center justify-center gap-2"
+              className="bg-gradient-to-r from-brand-dark to-brand-light text-white px-12 py-5 rounded-full font-bold text-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 shadow-xl text-center group flex items-center justify-center gap-3"
             >
               Unsere Leistungen
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
             </a>
             <a 
               href="#contact" 
               onClick={(e) => handleScroll(e, 'contact')}
-              className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-brand-dark transition-all transform hover:-translate-y-1 text-center shadow-lg"
+              className="bg-white/20 backdrop-blur-lg border-2 border-white/50 text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-white hover:text-brand-dark transition-all transform hover:-translate-y-2 text-center shadow-xl hover:shadow-2xl"
             >
               Termin vereinbaren
             </a>

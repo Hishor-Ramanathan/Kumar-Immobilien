@@ -50,22 +50,22 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Interactive Map (Placeholder) & Form */}
-          <div className="bg-white text-gray-800 rounded-2xl p-8 shadow-2xl">
-            <h3 className="text-2xl font-bold mb-6 text-brand-dark">Nachricht senden</h3>
-            <form className="space-y-4">
+          <div className="bg-white text-gray-800 rounded-3xl p-10 shadow-2xl border-2 border-gray-50">
+            <h3 className="text-3xl font-bold mb-8 text-brand-dark">Nachricht senden</h3>
+            <form className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-light" placeholder="Ihr Name" />
+                <label className="block text-sm font-semibold text-gray-700 mb-2 text-brand-dark">Name *</label>
+                <input type="text" className="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-brand-light focus:border-transparent transition-all" placeholder="Ihr Name" required />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input type="email" className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-light" placeholder="ihre.email@beispiel.ch" />
+                <label className="block text-sm font-semibold text-gray-700 mb-2 text-brand-dark">Email *</label>
+                <input type="email" className="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-brand-light focus:border-transparent transition-all" placeholder="ihre.email@beispiel.ch" required />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Nachricht</label>
-                <textarea rows={4} className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-light" placeholder="Wie können wir Ihnen helfen?"></textarea>
+                <label className="block text-sm font-semibold text-gray-700 mb-2 text-brand-dark">Nachricht *</label>
+                <textarea rows={5} className="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-brand-light focus:border-transparent transition-all resize-none" placeholder="Wie können wir Ihnen helfen?" required></textarea>
               </div>
-              <button className="w-full bg-brand-dark text-white font-bold py-4 rounded-lg hover:bg-brand-light transition-colors shadow-lg">
+              <button className="w-full bg-gradient-to-r from-brand-dark to-brand-light text-white font-bold py-5 rounded-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 shadow-lg text-lg">
                 Absenden
               </button>
             </form>
