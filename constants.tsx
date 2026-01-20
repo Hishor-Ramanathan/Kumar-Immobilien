@@ -46,7 +46,7 @@ export const Icons = {
 
 export const Logo = () => (
   <img 
-    src="/assets/logo.svg" 
+    src="/logo.svg" 
     alt="Kumar Immobilien Logo" 
     className="w-full h-full object-contain"
   />
