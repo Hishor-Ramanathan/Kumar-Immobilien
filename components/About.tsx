@@ -3,7 +3,7 @@ import { COMPANY_INFO, Icons } from '../constants';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 bg-brand-accent/30 relative overflow-hidden">
+    <section id="about" className="py-24 bg-brand-accent/30 relative overflow-hidden scroll-mt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
@@ -18,40 +18,25 @@ const About: React.FC = () => {
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
               Unser Ziel ist es, Ihnen den Immobilienprozess so angenehm wie möglich zu gestalten – egal ob Sie kaufen oder verkaufen. Wir kennen den Markt in 5702 Niederlenz wie unsere Westentasche.
             </p>
-            
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-brand-light/20 inline-block">
-              <div className="flex items-center gap-4">
-                <div className="bg-brand-dark text-white p-3 rounded-full">
-                   <span className="font-serif text-xl font-bold">K</span>
-                </div>
-                <div>
-                  <h4 className="font-bold text-brand-dark text-lg">{COMPANY_INFO.name}</h4>
-                  <p className="text-brand-light font-medium">{COMPANY_INFO.role}</p>
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* Google Maps Integration */}
-          <div className="lg:w-1/2 relative w-full h-[400px]">
-            <div className="absolute top-0 right-0 -mr-10 -mt-10 w-64 h-64 bg-brand-light/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 -ml-10 -mb-10 w-64 h-64 bg-brand-dark/10 rounded-full blur-3xl"></div>
-            
-            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+          {/* Map Content */}
+          <div className="lg:w-1/2 w-full">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white h-[450px]">
               <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2703.189568282909!2d8.167825277150117!3d47.394553502931215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4790176867078345%3A0x643644f77c3a033b!2sDorfrain%2010%2C%205702%20Niederlenz!5e0!3m2!1sde!2sch!4v1716383000000!5m2!1sde!2sch" 
                 width="100%" 
                 height="100%" 
-                frameBorder="0" 
-                style={{border:0}} 
-                src="https://maps.google.com/maps?q=Dorfrain%2010%2C%205702%20Niederlenz&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                allowFullScreen
-                title="Kumar Immobilien Standort"
-                className="w-full h-full"
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Standort Kumar Immobilien"
               ></iframe>
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-3 rounded-lg shadow-lg pointer-events-none">
-                 <p className="text-brand-dark font-medium flex items-center gap-2 text-sm">
+              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg hidden md:block">
+                 <p className="text-brand-dark font-bold flex items-center gap-2 text-sm">
                    <Icons.MapPin />
-                   {COMPANY_INFO.address}, {COMPANY_INFO.city}
+                   Dorfrain 10, 5702 Niederlenz
                  </p>
               </div>
             </div>

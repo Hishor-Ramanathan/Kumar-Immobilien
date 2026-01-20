@@ -45,15 +45,9 @@ export const Icons = {
 };
 
 export const Logo = () => (
-  <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Green Wave at the bottom */}
-    <path d="M0 140C40 130 80 160 120 160C160 160 180 140 200 135V200H0V140Z" fill="#68B07C"/>
-    <path d="M0 155C40 145 80 175 120 175C160 175 180 155 200 150V200H0V155Z" fill="#2E6F40" fillOpacity="0.3"/>
-    
-    {/* House Icon */}
-    <path d="M100 20L30 80H50V145H150V80H170L100 20Z" fill="#2E6F40" stroke="#2E6F40" strokeWidth="8" strokeLinejoin="round"/>
-    
-    {/* Window */}
-    <rect x="80" y="95" width="40" height="40" fill="#E8F5E9"/>
-  </svg>
+  <img 
+    src="components/images/logo.png" 
+    alt="Kumar Immobilien Logo" 
+    className="w-full h-full object-contain"
+  />
 );

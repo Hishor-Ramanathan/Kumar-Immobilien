@@ -3,7 +3,7 @@ import { COMPANY_INFO, Icons } from '../constants';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-24 bg-brand-dark text-white relative">
+    <section id="contact" className="py-24 bg-brand-dark text-white relative scroll-mt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           

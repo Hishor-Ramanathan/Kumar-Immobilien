@@ -8,15 +8,15 @@ import Footer from './components/Footer';
 import LegalModals from './components/LegalModals';
 
 const App: React.FC = () => {
-  const [legalModalType, setLegalModalType] = useState<'impressum' | 'datenschutz' | 'agb' | null>(null);
+  const [activeModal, setActiveModal] = useState<'impressum' | 'datenschutz' | 'agb' | null>(null);
 
-  const openLegalModal = (type: 'impressum' | 'datenschutz' | 'agb') => {
-    setLegalModalType(type);
+  const openModal = (type: 'impressum' | 'datenschutz' | 'agb') => {
+    setActiveModal(type);
   };
 
-  const closeLegalModal = () => {
-    setLegalModalType(null);
-  };
+  const closeModal = () => {
+    setActiveModal(null);
+  }
 
   return (
     <div className="font-sans text-gray-800 bg-white min-h-screen">
@@ -27,12 +27,12 @@ const App: React.FC = () => {
         <About />
         <Contact />
       </main>
-      <Footer onOpenLegal={openLegalModal} />
+      <Footer onOpenLegal={openModal} />
       
       <LegalModals 
-        isOpen={!!legalModalType} 
-        onClose={closeLegalModal} 
-        type={legalModalType} 
+        isOpen={activeModal !== null} 
+        onClose={closeModal} 
+        type={activeModal} 
       />
     </div>
   );

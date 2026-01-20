@@ -22,7 +22,7 @@ const services: ServiceItem[] = [
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="py-24 bg-white scroll-mt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h3 className="text-brand-light font-bold text-sm tracking-widest uppercase mb-2">Kompetenz</h3>

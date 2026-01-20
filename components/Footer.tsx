@@ -2,7 +2,7 @@ import React from 'react';
 import { COMPANY_INFO, Logo } from '../constants';
 
 interface FooterProps {
-  onOpenLegal: (type: 'impressum' | 'datenschutz' | 'agb') => void;
+  onOpenLegal?: (type: 'impressum' | 'datenschutz' | 'agb') => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
@@ -19,16 +19,30 @@ const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                 <p className="text-sm text-gray-400">Ihr Immobilienpartner</p>
              </div>
           </div>
-          <div className="flex gap-6">
-            <button onClick={() => onOpenLegal('datenschutz')} className="text-gray-400 hover:text-white transition-colors text-sm">Datenschutz</button>
-            <button onClick={() => onOpenLegal('impressum')} className="text-gray-400 hover:text-white transition-colors text-sm">Impressum</button>
-            <button onClick={() => onOpenLegal('agb')} className="text-gray-400 hover:text-white transition-colors text-sm">AGB</button>
+          <div className="flex flex-wrap justify-center gap-6">
+            <button 
+              onClick={() => onOpenLegal?.('impressum')} 
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Impressum
+            </button>
+            <button 
+              onClick={() => onOpenLegal?.('datenschutz')} 
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Datenschutz
+            </button>
+            <button 
+              onClick={() => onOpenLegal?.('agb')} 
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              AGB
+            </button>
           </div>
         </div>
         
         <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} {COMPANY_INFO.name}. Alle Rechte vorbehalten.</p>
-          <p className="mt-2">Erstellt für den Verkauf und die Vermietung von Immobilien in {COMPANY_INFO.city}.</p>
         </div>
       </div>
     </footer>
